@@ -1,0 +1,21 @@
+[gd_scene format=2]
+
+[node name="invetory_button" type="Button"]
+margin_right = 64.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 64, 64 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="quantity" type="Label" parent="."]
+margin_left = 32.0
+margin_top = 48.0
+margin_right = 56.0
+margin_bottom = 64.0
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
