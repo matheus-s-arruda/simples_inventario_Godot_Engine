@@ -52,8 +52,27 @@ func remove_item(item_id: int, quantity: int):
 		else:
 			var err = itens.erase(item_id)
 		emit_signal("update_itens", itens)
-		
-		
 
+
+func item_effect(item_id):
+	match item_id:
+		ItemName.HEALING_POTION:
+			print("Your life has been regenerated!")
+			remove_item(ItemName.HEALING_POTION, 1)
+			
+		ItemName.MAGIC_POTION:
+			print("your mana has been restored!")
+			remove_item(ItemName.MAGIC_POTION, 1)
+			
+		ItemName.MAGIC_SWORD:
+			print("armed himself with a sword")
+			
+		ItemName.BOW_AND_ARROW:
+			print("armed with bow")
+			
+		ItemName.MAGIC_WAND:
+			print("armed with wand")
+		
+		#ItemName.PORTAL_KEY: # esse item não possui efeito, portanto, não é nescessario colocar aqui
 
 

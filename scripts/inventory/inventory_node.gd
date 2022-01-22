@@ -26,6 +26,7 @@ func _inventory_update(itens: Dictionary):
 		var item_btn = inv_button.instance()
 		item_btn.name = String(_item)
 		item_btn.icon = load(itens[_item][Inventory.IMAGE])
+		item_btn.hint_tooltip = itens[_item][Inventory.DESCRIPTION]
 		
 		if itens[_item][Inventory.TYPE] == Inventory.POTION:
 			item_btn.get_node("quantity").text = String(itens[_item][Inventory.OWN])
